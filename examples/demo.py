@@ -1,6 +1,7 @@
 import sys
 import os
 from PyQt6.QtWidgets import QApplication, QTableWidgetItem, QVBoxLayout, QWidget, QLabel
+from PyQt6.QtGui import QColor
 
 # Add the parent directory to sys.path to allow importing pyqt_enhanced_table
 # This allows running the example directly from the repo without installation
@@ -76,13 +77,11 @@ def main():
         status_item = QTableWidgetItem(row_data[5])
         # Add some color to status
         if row_data[5] == "Out of Stock":
-            status_item.setForeground(
-                os.environ.get("QT_COLOR_DANGER", "#e74c3c")
-            )  # Fallback red
+            color = os.environ.get("QT_COLOR_DANGER", "#e74c3c")
+            status_item.setForeground(QColor(color))  # Fallback red
         elif row_data[5] == "Low Stock":
-            status_item.setForeground(
-                os.environ.get("QT_COLOR_WARNING", "#f1c40f")
-            )  # Fallback yellow
+            color = os.environ.get("QT_COLOR_WARNING", "#f1c40f")
+            status_item.setForeground(QColor(color))  # Fallback yellow
 
         table.setItem(row_idx, 5, status_item)
 
