@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyqt-enhanced-table"
+version = "0.1.0"
+description = "A powerful, Excel-like table widget for PyQt6 with filtering, sorting, and pagination."
+readme = "README.md"
+authors = [
+  { name="Hüseyin Averbek", email="huseyin.averbek@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: PyQt6",
+]
+dependencies = [
+    "PyQt6>=6.0",
+    "qtawesome>=1.2"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/aoyilmaz/pyqt-enhanced-table"
