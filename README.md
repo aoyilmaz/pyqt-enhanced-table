@@ -1,5 +1,7 @@
 # PyQt Enhanced Table
 
+![Demo Screenshot](screenshot.png)
+
 A powerful, Excel-like table widget for PyQt6 applications.
 
 ## Features
